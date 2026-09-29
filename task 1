@@ -1,0 +1,37 @@
+// Завдання 1, варіант 7
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+#define REAL_TYPE double  
+
+int main()
+{
+    REAL_TYPE a, b;
+
+    cout << "=== Обчислення виразу F = ((a-b)^3 - a^3) / (b^3 - 3ab^2 - 3a^2b) ===\n";
+    cout << "Поточний тип даних: " << typeid(a).name() << "\n\n";
+
+    cout << "Введіть a: ";
+    cin >> a;
+    cout << "Введіть b: ";
+    cin >> b;
+
+    REAL_TYPE numerator   = pow((double)(a - b), 3) - pow((double)a, 3);
+    REAL_TYPE denominator = pow((double)b, 3) - 3 * a * b * b - 3 * a * a * b;
+
+    if (denominator == 0)
+    {
+        cout << "Помилка: знаменник дорівнює нулю, ділення неможливе!\n";
+        return 1;
+    }
+
+    double F = (double)numerator / (double)denominator;
+
+    cout << "\nЧисельник   = " << numerator   << "\n";
+    cout << "Знаменник   = " << denominator << "\n";
+    cout << "Результат F = " << F << "\n";
+
+    return 0;
+}
