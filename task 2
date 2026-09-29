@@ -1,0 +1,24 @@
+// Завдання 2, варіант 7
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int m, n;
+
+    cout << "=== Обчислення виразу: m + --n ===\n";
+    cout << "Введіть m: ";
+    cin >> m;
+    cout << "Введіть n: ";
+    cin >> n;
+
+    cout << "\nЗначення до обчислення: m = " << m << ", n = " << n << "\n";
+
+    int result = m + --n; 
+
+    cout << "Значення після обчислення: m = " << m << ", n = " << n << "\n";
+    cout << "Результат виразу m + --n = " << result << "\n";
+
+    return 0;
+}
